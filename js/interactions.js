@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import * as THREE from 'three';
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js';
 
 export function handleInteractions(scene, camera, renderer, composer) {
     let mouseX = 0, mouseY = 0;
