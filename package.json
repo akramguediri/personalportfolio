@@ -1,0 +1,17 @@
+{
+    "name": "threejs-portfolio",
+    "version": "1.0.0",
+    "description": "A creative Three.js portfolio",
+    "type": "module",
+    "scripts": {
+        "start": "vite",
+        "build": "vite build",
+        "serve": "vite preview"
+    },
+    "dependencies": {
+        "three": "^0.150.1"
+    },
+    "devDependencies": {
+        "vite": "^4.0.0"
+    }
+}

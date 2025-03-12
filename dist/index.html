@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Visionary | Portfolio</title>
+    <style>
+        body { 
+            margin: 0; 
+            overflow: hidden; 
+            background: #000; 
+            color: #fff; 
+            font-family: "Arial", sans-serif; 
+            text-align: center; 
+        }
+        canvas { 
+            display: block; 
+        }
+        h1 { 
+            font-size: 3rem; 
+            margin: 50px 0 10px; 
+        }
+        p { 
+            font-size: 1.5rem; 
+            opacity: 0.8; 
+        }
+        .overlay { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            text-align: center; 
+            z-index: 10; 
+        }
+        button { 
+            padding: 15px 30px; 
+            font-size: 1.2rem; 
+            background: transparent; 
+            color: white; 
+            border: 2px solid white; 
+            cursor: pointer; 
+            margin-top: 20px; 
+            transition: 0.3s; 
+        }
+        button:hover { 
+            background: white; 
+            color: black; 
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/index-dd293aa5.js"></script>
+</head>
+<body>
+    <div class="overlay">
+        <h1>Welcome to The Visionary</h1>
+        <p>Where Strategy, Code, and Aesthetics Meet.</p>
+        <button onclick="startExperience()">Enter the Dimension</button>
+    </div>
+    <canvas id="threejs-canvas"></canvas>
+        
+</body>
+</html>

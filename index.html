@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akram Guediri | Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- External CSS -->
+
+    <!-- ✅ Custom Font Links (Elegant & Bold) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Inter:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 🔄 ASCII Loading -->
+    <div class="loading-screen" id="loading-screen"></div>
+
+    <!-- 🏠 Home Button (Hidden Initially) -->
+    <button class="home-button" id="home-button" onclick="restartExperience()">Akram Guediri</button>
+
+    <!-- 🚀 Intro Overlay with Enhanced Aesthetics -->
+    <div class="overlay" id="overlay">
+        <h1 class="main-title">Akram Guediri | Portfolio</h1>
+        <p class="subtitle">Where Strategy, Code, and Aesthetics Meet.</p>
+        <p class="tagline">𝘉𝘦𝘺𝘰𝘯𝘥 𝘛𝘦𝘤𝘩. 𝘉𝘦𝘺𝘰𝘯𝘥 𝘝𝘪𝘴𝘪𝘰𝘯.</p>
+    </div>
+
+    <!-- 🎬 Background Animated Canvas -->
+    <canvas id="threejs-canvas"></canvas>
+
+    <!-- ✅ Moving Subtle Text -->
+    <div class="floating-text">
+        <span>𝖠 𝖱𝖾𝖺𝗅𝗆 𝗈𝖿 𝖵𝗂𝗌𝗂𝗈𝗇𝖺𝗋𝗒 𝖣𝖾𝗌𝗂𝗀𝗇</span>
+    </div>
+
+    <!-- 📌 Permanent Footer Links -->
+    <div class="fixed-footer">
+        <a href="https://github.com/akramguediri" target="_blank" class="footer-link">[GitHub]</a> 
+        <a href="https://linkedin.com/in/aguediri" target="_blank" class="footer-link">[LinkedIn]</a>
+    </div>
+    
+
+    <script type="module">
+        import { startExperience } from "/js/main.js";
+        window.startExperience = startExperience;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const loadingScreen = document.getElementById("loading-screen");
+            const overlay = document.getElementById("overlay");
+            const homeButton = document.getElementById("home-button");
+
+            if (!loadingScreen || !overlay || !homeButton) {
+                console.error("❌ Essential elements missing in DOM!");
+                return;
+            }
+
+            // 🔄 Name Reveal Loading Animation (Appearing from Back to Front)
+            const frames = [
+                "++++++++++++++++++++++++",
+                "++++++++++++++++++++++--",
+                "+++++++++++++++++++++---",
+                "+++++++++++++++++++-----",
+                "+++++++++++++++++-------",
+                "+++++++++++++++---------",
+                "+++++++++++++-----------",
+                "+++++++++++-------------",
+                "+++++++++---------------",
+                "+++++++-----------------",
+                "+++++-------------------",
+                "+++---------------------",
+                "+-----------------------",
+                "------------------------"
+            ];
+
+            let frameIndex = 0;
+
+            function updateLoadingText() {
+                const loadingScreen = document.getElementById("loading-screen"); 
+                if (!loadingScreen) {
+                    console.warn("⚠️ Warning: 'loading-screen' not found. Skipping update.");
+                    return;
+                }
+                loadingScreen.innerText = frames[frameIndex] || "AKRAMGUEDIRI";
+                frameIndex = (frameIndex + 1) % frames.length;
+            }
+
+            const loadingInterval = setInterval(updateLoadingText, 200);
+
+            setTimeout(() => {
+                clearInterval(loadingInterval);
+                if (loadingScreen) loadingScreen.style.opacity = "0";
+
+                setTimeout(() => {
+                    if (loadingScreen) loadingScreen.remove();
+                    overlay.style.opacity = "1"; 
+                    homeButton.style.opacity = "1"; 
+
+                    setTimeout(() => {
+                        console.log("🚀 Starting Experience...");
+                        startExperience();
+                        overlay.style.opacity = "0"; 
+                    }, 3000);
+                }, 1000);
+            }, 4000);
+        });
+
+        // 🔄 Restart Function for Home Button
+        function restartExperience() {
+            location.reload(); 
+        }
+    </script>
+</body>
+</html>

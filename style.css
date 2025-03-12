@@ -1,0 +1,161 @@
+/* 🌌 Midnight Aesthetic (Black Background) */
+body { 
+    margin: 0; 
+    overflow: hidden; 
+    background: black; /* Ensuring absolute black background */
+    color: #ff0000; 
+    font-family: "BrillantFont", sans-serif; 
+    text-align: center; 
+}
+
+/* ✅ Ensure the Three.js Canvas Fills the Screen */
+canvas { 
+    display: block; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 🎭 Seamless Name Animation (Loading) */
+.loading-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-family: "paragraph", sans-serif;
+    color: rgba(255, 0, 0, 0.9);
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    white-space: pre-line;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 15px rgba(255, 0, 0, 0.6);
+    background: transparent; /* ✅ Fully transparent background */
+}
+
+/* 🚀 Overlay (Refined Intro Screen) */
+.overlay { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    z-index: 10; 
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
+}
+
+/* 🌟 Elegant Title */
+h1 {
+    font-size: 4.5rem; 
+    margin: 10px 0;
+    font-family: "BrillantFont", serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ff0000;
+    text-shadow: 5px 5px 25px rgba(255, 0, 0, 0.7);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* 🖋️ Sophisticated Subtitle */
+p { 
+    font-size: 1.8rem; 
+    opacity: 0.8; 
+    font-family: "paragraph", sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 12px rgba(255, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.4s ease-out forwards;
+}
+
+/* 🎞️ Floating Elegant Text */
+.floating-text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    animation: floatText 8s ease-in-out infinite;
+}
+
+/* 🔄 Floating Animation */
+@keyframes floatText {
+    0% { transform: translate(-50%, 0px); opacity: 0.6; }
+    50% { transform: translate(-50%, 10px); opacity: 1; }
+    100% { transform: translate(-50%, 0px); opacity: 0.6; }
+}
+
+/* ⏪ Luxurious Home Button */
+.home-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1rem;
+    padding: 12px 20px;
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    cursor: pointer;
+    font-family: "BrillantFont", sans-serif;
+    z-index: 20;
+    transition: background 0.3s ease-in-out, opacity 0.5s, transform 0.2s;
+    opacity: 0;
+}
+.home-button:hover {
+    background: #ff0000;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* 🅰️ Custom Fonts */
+@font-face {
+    font-family: "BrillantFont";
+    src: url("assets/fonts/brillant.otf") format("opentype");
+}
+@font-face {
+    font-family: "paragraph";
+    src: url("assets/fonts/paragraph.ttf") format("opentype");
+}
+
+/* ✨ Subtle Glow on Hover */
+h1:hover, p:hover, .floating-text:hover {
+    text-shadow: 6px 6px 20px rgba(255, 0, 0, 0.8);
+}
+
+/* 📜 Smooth Text Appearance */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📌 Fixed Footer Links */
+.fixed-footer {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 100;
+}
+
+.footer-link {
+    color: #ff0000 !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 12px rgba(255, 0, 0, 0.6);
+    font-family:"paragraph"
+}
+
+.footer-link:hover {
+    text-shadow: 3px 3px 15px rgba(255, 0, 0, 0.8);
+    transform: scale(1.1);
+}
