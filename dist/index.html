@@ -3,59 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Visionary | Portfolio</title>
-    <style>
-        body { 
-            margin: 0; 
-            overflow: hidden; 
-            background: #000; 
-            color: #fff; 
-            font-family: "Arial", sans-serif; 
-            text-align: center; 
-        }
-        canvas { 
-            display: block; 
-        }
-        h1 { 
-            font-size: 3rem; 
-            margin: 50px 0 10px; 
-        }
-        p { 
-            font-size: 1.5rem; 
-            opacity: 0.8; 
-        }
-        .overlay { 
-            position: absolute; 
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%); 
-            text-align: center; 
-            z-index: 10; 
-        }
-        button { 
-            padding: 15px 30px; 
-            font-size: 1.2rem; 
-            background: transparent; 
-            color: white; 
-            border: 2px solid white; 
-            cursor: pointer; 
-            margin-top: 20px; 
-            transition: 0.3s; 
-        }
-        button:hover { 
-            background: white; 
-            color: black; 
-        }
-    </style>
-  <script type="module" crossorigin src="/assets/index-dd293aa5.js"></script>
+    <title>Akram Guediri | Portfolio</title>
+     <!-- External CSS -->
+
+    <!-- ✅ Custom Font Links (Elegant & Bold) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Inter:wght@300;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-e382519a.js"></script>
+  <link rel="stylesheet" href="./assets/index-46b62c9a.css">
 </head>
 <body>
-    <div class="overlay">
-        <h1>Welcome to The Visionary</h1>
-        <p>Where Strategy, Code, and Aesthetics Meet.</p>
-        <button onclick="startExperience()">Enter the Dimension</button>
+    <!-- 🔄 ASCII Loading -->
+    <div class="loading-screen" id="loading-screen"></div>
+
+    <!-- 🏠 Home Button (Hidden Initially) -->
+    <button class="home-button" id="home-button" onclick="restartExperience()">Akram Guediri</button>
+
+    <!-- 🚀 Intro Overlay with Enhanced Aesthetics -->
+    <div class="overlay" id="overlay">
+        <h1 class="main-title">Akram Guediri | Portfolio</h1>
+        <p class="subtitle">Where Strategy, Code, and Aesthetics Meet.</p>
+        <p class="tagline">𝘉𝘦𝘺𝘰𝘯𝘥 𝘛𝘦𝘤𝘩. 𝘉𝘦𝘺𝘰𝘯𝘥 𝘝𝘪𝘴𝘪𝘰𝘯.</p>
     </div>
+
+    <!-- 🎬 Background Animated Canvas -->
     <canvas id="threejs-canvas"></canvas>
-        
+
+    <!-- ✅ Moving Subtle Text -->
+    <div class="floating-text">
+        <span>𝖠 𝖱𝖾𝖺𝗅𝗆 𝗈𝖿 𝖵𝗂𝗌𝗂𝗈𝗇𝖺𝗋𝗒 𝖣𝖾𝗌𝗂𝗀𝗇</span>
+    </div>
+
+    <!-- 📌 Permanent Footer Links -->
+    <div class="fixed-footer">
+        <a href="https://github.com/akramguediri" target="_blank" class="footer-link">[GitHub]</a> 
+        <a href="https://linkedin.com/in/aguediri" target="_blank" class="footer-link">[LinkedIn]</a>
+    </div>
+    
+
+    
 </body>
 </html>

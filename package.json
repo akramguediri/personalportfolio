@@ -9,6 +9,7 @@
         "serve": "vite preview"
     },
     "dependencies": {
+        "gsap": "^3.12.7",
         "three": "^0.150.1"
     },
     "devDependencies": {

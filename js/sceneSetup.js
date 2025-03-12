@@ -1,5 +1,5 @@
-import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js';
-import { RGBELoader } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/loaders/RGBELoader.js';
+import * as THREE from 'three';
+import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 
 export function setupScene() {
     const scene = new THREE.Scene();
