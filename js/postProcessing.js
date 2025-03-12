@@ -1,12 +1,12 @@
 import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js';
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
-import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
-import { GlitchPass } from "three/examples/jsm/postprocessing/GlitchPass.js";
-import { LUTPass } from 'three/examples/jsm/postprocessing/LUTPass.js';
-import { LUTCubeLoader } from 'three/examples/jsm/loaders/LUTCubeLoader.js';
-import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
-import gsap from 'gsap';
+import { EffectComposer } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/postprocessing/UnrealBloomPass.js';
+import { GlitchPass } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/postprocessing/GlitchPass.js';
+import { LUTPass } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/postprocessing/LUTPass.js';
+import { LUTCubeLoader } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/loaders/LUTCubeLoader.js';
+import { ShaderPass } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/postprocessing/ShaderPass.js';
+import gsap from 'https://cdn.jsdelivr.net/npm/gsap@3.12.2/index.js';
 
 export function setupPostProcessing(scene, camera, renderer) {
     const composer = new EffectComposer(renderer);
