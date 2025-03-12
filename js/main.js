@@ -1,11 +1,11 @@
-import { setupScene, setupRenderer, setupCamera } from './sceneSetup.js';
-import { setupLighting} from './lighting.js';
-import { setupPostProcessing } from './postProcessing.js';
-import { handleInteractions } from './interactions.js';
-import { initializeSections, handleScroll } from './sections.js';
-import { createParticles, animateParticles } from './particles.js';
-import { createRuby, animateRuby } from './ruby.js';
-import { loadGLBModel } from './GLBLoader.js';
+import { setupScene, setupRenderer, setupCamera } from './js/sceneSetup.js';
+import { setupLighting} from './js/lighting.js';
+import { setupPostProcessing } from './js/postProcessing.js';
+import { handleInteractions } from './js/interactions.js';
+import { initializeSections, handleScroll } from './js/sections.js';
+import { createParticles, animateParticles } from './js/particles.js';
+import { createRuby, animateRuby } from './js/ruby.js';
+import { loadGLBModel } from './js/GLBLoader.js';
 // Global variables
 let scene, camera, renderer, composer, particles, ruby;
 
